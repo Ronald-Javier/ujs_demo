@@ -1,0 +1,10 @@
+
+<%= form_with(url: '/comments', scope: :comment) do |f| %>
+<%= f.text_field 'content' %>
+<%= f.submit 'crear comentario', class: 'btn btn-danger' %>
+<% end %>
+
+<%= link_to "Ver comentarios", comments_path, class: 'btn btn-primary', 'data-remote': true %>
+<ul class='list-group'></ul>
+
+<%= render  "modal" %>
